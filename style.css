@@ -1,0 +1,16 @@
+*{
+    margin: 0 auto;
+}
+
+.poster{
+width: 10em;
+border-radius: 1em;
+
+}
+.box{
+    display: flex;
+}
+
+.nowShowing{
+    margin-right: 3em;
+}
