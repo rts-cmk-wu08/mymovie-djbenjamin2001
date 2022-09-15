@@ -1,16 +1,47 @@
 *{
-    margin: 0 auto;
+    margin: 0 ;
+    
 }
 
 .poster{
 width: 10em;
 border-radius: 1em;
+box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 
 }
-.box{
+.nowshowingmovies{
     display: flex;
+    overflow-x: scroll;
+    background: transparent;
+}
+.popularmovies{
+display: flex;
+margin: 1em;
+}
+.nowShowing{
+    margin: 1em;
 }
 
-.nowShowing{
-    margin-right: 3em;
+
+.nowshowingheadline{
+    display: flex;
+    justify-content: space-between;
 }
+
+.popularheadline{
+    display: flex;
+    justify-content: space-between;
+}
+
+.popularmovie__text{
+    margin: 1em;
+}
+
+.poster--popular{
+    width: 10em;
+    border-radius: 1em;
+    }
+
+    .imdb-star{
+color: #FFC319;    }
+
