@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap');
+
+
 *{
     margin: 0 ;
-    
+    font-family: 'Mulish', sans-serif;
 }
 
 .poster{
@@ -16,7 +19,7 @@ box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 .popularmovies{
 display: flex;
-margin: 1em;
+gap: 1em;
 }
 .nowShowing{
     margin: 1em;
@@ -33,9 +36,6 @@ margin: 1em;
     justify-content: space-between;
 }
 
-.popularmovie__text{
-    margin: 1em;
-}
 
 .poster--popular{
     width: 10em;
@@ -45,3 +45,19 @@ margin: 1em;
     .imdb-star{
 color: #FFC319;    }
 
+.genre__tag{
+    margin-right: 0.2em;
+    margin-bottom: 0.5em;
+    padding: 0.2em;
+    background-color: #DBE3FF;
+    color: #88A4E8;
+    display: inline-block;
+    border-radius: 100px;
+    text-transform: capitalize;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
