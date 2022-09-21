@@ -1,20 +1,21 @@
 document.addEventListener("DOMContentLoaded", () =>{
-    let title = document.createElement("header")
+   let wrapperElm = document.querySelector(".wrapper")
     let nowshowing = document.querySelector(".nowshowing")
     let popular = document.querySelector(".popular")
     let imgPath = "https://image.tmdb.org/t/p/original"
-       fetch(" https://api.themoviedb.org/3/movie/popular?api_key=2c8fc77b797cdf943cad63314a45daa4&language=en-US&page=1")
+       fetch(" https://api.themoviedb.org/3/movie/popular?api_key=2c8fc77b797cdf943cad63314a45daa4&language=en-US&page=3")
       
        .then(response => response.json())
        .then(data =>{
-           console.log(data)
         
-          title.innerHTML = `
-          <h2 class="movieheadline">MyMovies</h2>
-          `
-          document.body.prepend(title)
-
-
+           console.log(data)
+        let headerElm = document.createElement("header")
+        headerElm.classList.add("header")
+       headerElm.innerHTML = `
+       <h2>MyMovies</h2>
+       <button>switch</button>
+       `
+      wrapperElm.append(headerElm)
           //section 1 start
        let nowshowingHeadline = document.createElement("div")
        nowshowingHeadline.classList.add("nowshowingheadline")
@@ -32,7 +33,7 @@ nowshowing.append(nowshowingMovies)
           let showing = document.createElement("section")
          showing.classList.add("nowShowing")
       showing.innerHTML = `
-      <a href=""><img class="poster" src="${imgPath + movie.poster_path}" alt=""></a>
+      <a href="detail.html?id=${movie.id}"><img class="poster" src="${imgPath + movie.poster_path}" alt=""></a>
       <h2 >${movie.title}</h2>
       <p><i class="fa-solid fa-star imdb-star"></i>${movie.vote_average}/10 imdb</p>
       `
@@ -66,13 +67,22 @@ nowshowing.append(nowshowingMovies)
             let showingpopular = document.createElement("section")
            showingpopular.classList.add("popularmovies")
         showingpopular.innerHTML = `
-        <a href=""><img class="poster--popular" src="${imgPathPopular + movie.poster_path}" alt=""></a>
+        <a href="detail.html?id=${movie.id}"><img class="poster--popular" src="${imgPathPopular + movie.poster_path}" alt=""></a>
         <div class="popularmovie__text">
         <h2 >${movie.title}</h2>
-        <p><i class="fa-solid fa-star imdb-star"></i>${movie.vote_average}/10 imdb</p></div>
+        <p><i class="fa-solid fa-star imdb-star"></i>${movie.vote_average}/10 imdb</p>
+        <p class="genres"></p>
+        </div>
         `
   popularMovies.append(showingpopular)
-     
+  let genreElm = showingpopular.querySelector(".genres")
+movie.genre_ids.forEach(id =>{
+   let currentGenre =  genres.find(genre => genre.id == id)
+   let genreSpan = document.createElement("span")
+   genreSpan.classList.add("genre__tag")
+   genreSpan.innerText = currentGenre.name
+   genreElm.append(genreSpan)
+})
              })
          
            })
@@ -80,4 +90,3 @@ nowshowing.append(nowshowingMovies)
          
        })
      
-       
