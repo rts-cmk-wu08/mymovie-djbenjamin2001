@@ -14,7 +14,9 @@ document.addEventListener("DOMContentLoaded", () =>{
         headerElm.classList.add("header")
        headerElm.innerHTML = `
        <h2>MyMovies</h2>
-       <button>switch</button>
+  <button class="button">Light</button>
+  <button class="button">Dark</button>
+  
        `
       wrapperElm.append(headerElm)
           //section 1 start
@@ -77,13 +79,6 @@ nowshowing.append(nowshowingMovies)
         ` 
         popularMovies.append(showingpopular)
 
-        let footerElm = document.createElement("footer")
-        footerElm.classList.add("footer")
-        footerElm.innerHTML = `
-        <h2>MyMovies</h2>
-        <button>switch</button>
-        `
-         footerwrapperElm.append(footerElm)
 
  
   let genreElm = showingpopular.querySelector(".genres")
@@ -97,7 +92,14 @@ movie.genre_ids.forEach(id =>{
 
 
              })
-         
+             let footerElm = document.createElement("footer")
+             footerElm.classList.add("footer")
+             footerElm.innerHTML = `
+             <h2>MyMovies</h2>
+             <button>switch</button>
+             `
+              footerwrapperElm.append(footerElm)
+     
            })
          
          

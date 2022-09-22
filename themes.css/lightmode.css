@@ -1,0 +1,10 @@
+body{
+    background-color: white;
+    color: black;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    border: none;
+}
