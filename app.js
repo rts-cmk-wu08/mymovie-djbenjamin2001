@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () =>{
    let wrapperElm = document.querySelector(".wrapper")
     let nowshowing = document.querySelector(".nowshowing")
     let popular = document.querySelector(".popular")
+    let footerwrapperElm = document.querySelector(".footerwrapper")
     let imgPath = "https://image.tmdb.org/t/p/original"
        fetch(" https://api.themoviedb.org/3/movie/popular?api_key=2c8fc77b797cdf943cad63314a45daa4&language=en-US&page=3")
       
@@ -73,8 +74,18 @@ nowshowing.append(nowshowingMovies)
         <p><i class="fa-solid fa-star imdb-star"></i>${movie.vote_average}/10 imdb</p>
         <p class="genres"></p>
         </div>
+        ` 
+        popularMovies.append(showingpopular)
+
+        let footerElm = document.createElement("footer")
+        footerElm.classList.add("footer")
+        footerElm.innerHTML = `
+        <h2>MyMovies</h2>
+        <button>switch</button>
         `
-  popularMovies.append(showingpopular)
+         footerwrapperElm.append(footerElm)
+
+ 
   let genreElm = showingpopular.querySelector(".genres")
 movie.genre_ids.forEach(id =>{
    let currentGenre =  genres.find(genre => genre.id == id)
@@ -83,6 +94,8 @@ movie.genre_ids.forEach(id =>{
    genreSpan.innerText = currentGenre.name
    genreElm.append(genreSpan)
 })
+
+
              })
          
            })
