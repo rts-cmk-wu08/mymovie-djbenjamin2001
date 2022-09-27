@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap');
-
+@import url(toggleswitch.css);
 
 *{
     margin: 0 ;
@@ -19,7 +19,6 @@ box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 .popularmovies{
 display: flex;
-gap: 1em;
 }
 .nowShowing{
     margin: 1em;
@@ -29,17 +28,21 @@ gap: 1em;
 .nowshowingheadline{
     display: flex;
     justify-content: space-between;
+  margin: 1em;
 }
 
 .popularheadline{
     display: flex;
     justify-content: space-between;
+    margin: 1em;
 }
 
 
 .poster--popular{
     width: 10em;
     border-radius: 1em;
+    margin-bottom: 2em;
+    margin-left: 1em;
     }
 
     .imdb-star{
@@ -59,5 +62,37 @@ color: #FFC319;    }
 .header{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
+    margin-top: 2em;
+}
+.header h2{
+   margin-left: 6em;
+}
+
+.footerwrapper{
+    position: fixed;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    background-color: white;
+}
+
+.popularmovie__text{
+    margin-left: 1em;
+}
+.popularmovie__text p{
+margin-bottom: 1em;
+margin-top: 1em;
+}
+
+button{
+    border: 1px solid #AAA9B1;
+    border-radius: 100px;
+}
+.footerwrapper{
+    text-align: center;
+    font-size: 2em;
+}
+.footerwrapper i{
+ margin: 0.5em;   
 }

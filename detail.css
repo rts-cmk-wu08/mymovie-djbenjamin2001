@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap');
+@import url(toggleswitch.css);
+*{
+    margin: 0 ;
+    font-family: 'Mulish', sans-serif;
+}
+.backdrop__poster{
+width: 100%;
+height: 260px;
+z-index: 2;
+}
+.backdrop__poster img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.img-arrow{
+    position: absolute;
+    color: white;
+ margin: 2.5em;
+}
+.imdb-star{
+    color: #FFC319;   
+    margin-top: 1em;
+}
+    .detailtextarea{      
+z-index: 1;
+position: absolute;
+top: 240px;
+padding: 1em;
+width: 100vw;
+box-sizing: border-box;
+background-color: white;
+border-radius: 10px 10px 10px 0px;
+    }
+ .description p{
+    margin-top: 1em;
+ } 
+ .description h2{
+    margin-top: 1em;
+ } 
+ .detailgenre p{
+    margin-top: 1em;
+    margin-right: 0.2em;
+    margin-bottom: 0.5em;
+    padding: 0.2em;
+    background-color: #DBE3FF;
+    color: #88A4E8;
+    display: inline-block;
+    border-radius: 100px;
+    text-transform: capitalize;
+}
+.cast img{
+    width: 4.5em;
+    margin: 0.2em;
+    border-radius:1em ;
+}
+.cast{
+ margin-top: 2em;
+}
+.castsection{
+    margin-top: 2em;
+    display: flex;
+    overflow-x: scroll;
+}
+.profile--path{
+    background-image: url(/pngwing.com.png);
+}
+.info{
+    display: flex;
+  justify-content: center;
+}
+.info p{
+   text-align: center;
+   margin-left: 0.5em;
+   margin-right: 0.5em;
+   margin-top: 1em;
+}
+.header{
+    justify-content: space-between;
+    position: absolute;
+}
+.header .switch{
+    left: 340px;
+    top: 35px;
+}
+.castsection p{
+    font-size: 16px;
+    text-align: center;
+}
+.castsection img{
+    margin: 1em;
+}

@@ -3,8 +3,13 @@ body{
     color: black;
 }
 
-.button{
+.lightBtn{
     background-color: black;
     color: white;
     border: none;
+}
+button{
+    border: 1px solid #AAA9B1;
+    border-radius: 100px;
+    background-color: white;
 }
