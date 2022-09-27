@@ -4,21 +4,24 @@ document.addEventListener("DOMContentLoaded", () =>{
     let popular = document.querySelector(".popular")
     let footerwrapperElm = document.querySelector(".footerwrapper")
     let imgPath = "https://image.tmdb.org/t/p/original"
+    let headerElm = document.createElement("header")
+    headerElm.classList.add("header")
+   headerElm.innerHTML = `
+   <h2>MyMovies</h2>
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+   `
+   wrapperElm.append(headerElm)
        fetch(" https://api.themoviedb.org/3/movie/popular?api_key=2c8fc77b797cdf943cad63314a45daa4&language=en-US&page=3")
       
        .then(response => response.json())
        .then(data =>{
         
            console.log(data)
-        let headerElm = document.createElement("header")
-        headerElm.classList.add("header")
-       headerElm.innerHTML = `
-       <h2>MyMovies</h2>
-  <button class="button">Light</button>
-  <button class="button">Dark</button>
-  
-       `
-      wrapperElm.append(headerElm)
+   
+      
           //section 1 start
        let nowshowingHeadline = document.createElement("div")
        nowshowingHeadline.classList.add("nowshowingheadline")
@@ -95,8 +98,9 @@ movie.genre_ids.forEach(id =>{
              let footerElm = document.createElement("footer")
              footerElm.classList.add("footer")
              footerElm.innerHTML = `
-             <h2>MyMovies</h2>
-             <button>switch</button>
+             <i class="fa-solid fa-bookmark"></i>
+             <i class="fa-solid fa-ticket"></i>
+             <i class="fa-solid fa-film"></i>
              `
               footerwrapperElm.append(footerElm)
      
